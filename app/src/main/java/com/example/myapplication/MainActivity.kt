@@ -9,13 +9,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var count=0
+        var count=100
 
         val fab=findViewById<FloatingActionButton>(R.id.fab)
         val tfab=findViewById<TextView>(R.id.textView)
         tfab.text=count.toString()
         fab.setOnClickListener {
-            count++
+            count--
             tfab.text=count.toString()
         }
 
